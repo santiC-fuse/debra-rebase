@@ -39,7 +39,7 @@ def process_result(branchName: str, result: bool):
 def branch_rebase(projectName: str, branchName: str):
     newDirectory = create_directory()
     try: 
-        GITHUB_TOKEN = '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'
+        GITHUB_TOKEN = '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'
         
         pyGitHub = Github(GITHUB_TOKEN)
         originRepo = pyGitHub.get_repo("saveupfront/" + projectName)
@@ -60,6 +60,7 @@ def branch_rebase(projectName: str, branchName: str):
         
         return process_result(branchName, True)
     except Exception as error:
+        print(error)
         return process_result(branchName, False)
     finally:
         delete_directory(newDirectory.name)
