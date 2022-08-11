@@ -39,7 +39,7 @@ def process_result(branchName: str, result: bool):
 def branch_rebase(projectName: str, branchName: str):
     newDirectory = create_directory()
     try: 
-        GITHUB_TOKEN = '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'
+        GITHUB_TOKEN = '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'
         
         pyGitHub = Github(GITHUB_TOKEN)
         originRepo = pyGitHub.get_repo("saveupfront/" + projectName)
